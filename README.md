@@ -16,7 +16,8 @@ Sinta-se a vontade para contribuir.
 
 1. [Instalando o Python](/instalacao)
 2. [Variáveis](/variaveis)
-2. [Operadores lógicos](/operadores-logicos)
+3. [Operadores lógicos](/operadores-logicos)
+4. [Operações matemáticas](/operacoes-matematicas)
 
 ## Agradecimentos
 
