@@ -21,4 +21,5 @@ Acesse o [Pyladies Brasil](http://brasil.pyladies.com/)
 
 # Agenda
 
-1. [Instando o Python](/instalacao)
+1. [Instalando o Python](/instalacao)
+2. [Variáveis](/variaveis)
