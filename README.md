@@ -12,14 +12,14 @@ Os temas cobertos são:
 
 Sinta-se a vontade para contribuir.
 
+# Agenda
+
+1. [Instalando o Python](/instalacao)
+2. [Variáveis](/variaveis)
+
 ## Agradecimentos
 
 Em especial ao Pyladies Blumenau por ter ajudado a montar todo o material :heart:
 
 Acesse o [Pyladies Brasil](http://brasil.pyladies.com/)
 
-
-# Agenda
-
-1. [Instalando o Python](/instalacao)
-2. [Variáveis](/variaveis)
