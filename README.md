@@ -20,6 +20,7 @@ Sinta-se a vontade para contribuir.
 4. [Operações matemáticas](/operacoes-matematicas)
 5. [Operações com strings](/operacoes-strings)
 6. [Variáveis Compostas](/variaveis-compostas)
+7. [Funções](/funcoes)
 
 ## Agradecimentos
 
