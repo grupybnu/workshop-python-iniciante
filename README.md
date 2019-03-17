@@ -19,6 +19,7 @@ Sinta-se a vontade para contribuir.
 3. [Operadores lógicos](/operadores-logicos)
 4. [Operações matemáticas](/operacoes-matematicas)
 5. [Operações com strings](/operacoes-strings)
+6. [Variáveis Compostas](/variaveis-compostas)
 
 ## Agradecimentos
 
