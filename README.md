@@ -21,6 +21,7 @@ Sinta-se a vontade para contribuir.
 5. [Operações com strings](/operacoes-strings)
 6. [Variáveis Compostas](/variaveis-compostas)
 7. [Funções](/funcoes)
+8. [Loops (Repetições)](/repeticoes)
 
 ## Agradecimentos
 
