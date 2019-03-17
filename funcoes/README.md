@@ -33,7 +33,9 @@ soma_1_mais_2()
 
 - [dir](#dir)
 - [help](#help)
-- [input](#input
+- [input](#input)
+
+[Link da documentação completa do Python](https://docs.python.org/3/library/functions.html)
 
 ### dir
 Lista todos os comandos válidos para a variável. Sintaxe:
