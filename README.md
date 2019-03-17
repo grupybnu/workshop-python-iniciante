@@ -18,6 +18,7 @@ Sinta-se a vontade para contribuir.
 2. [Variáveis](/variaveis)
 3. [Operadores lógicos](/operadores-logicos)
 4. [Operações matemáticas](/operacoes-matematicas)
+5. [Operações com strings](/operacoes-strings)
 
 ## Agradecimentos
 
