@@ -23,6 +23,7 @@ Sinta-se a vontade para contribuir.
 7. [Funções](/funcoes)
 8. [Condicionais (if)](/condicional)
 9. [Loops (Repetições)](/repeticoes)
+10. [Exercício](/exercicio)
 
 ## Agradecimentos
 
