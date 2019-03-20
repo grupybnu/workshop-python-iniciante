@@ -52,6 +52,56 @@ python main.py --nome "Meu nome"
 
 _dicas_:
 * Uma requisição para `https://swapi.co/api/people/` retorna todos os personagens
-* O resultado é paginado de 10 em 10 personagens
-* Portanto, se não encontrar na página atual, tem que seguir para a página no atributo `next`
+    * O resultado é paginado de 10 em 10 personagens
+    * Portanto, se não encontrar na página atual, tem que seguir para a página no atributo `next`
 * A comparação dos nomes deve ser _case insensitive_, ou seja, `luke skywalker == LUKE SKYWALKER`
+
+## 6. Faça _matching_ parcial dos nomes
+
+Na mesma aplicação, se encontrar um personagem com um nome exatamente igual,
+mostre as informações dele (feito na parte anterior).
+Entretanto, permita uma pesquisa parcial do nome.
+Por exemplo, `python main.py --nome "Skywalker"` deve imprimir as informações de
+_Luke Skywalker_ e _Anakin Skywalker_.
+
+_obs_: você pode optar por uma das opções:
+* Opção 1:
+    * `python main.py --nome "Skywalker"`
+    * Se encontrou um nome exatamente igual, exibe essas informações
+    * Se não, exibe todos os nomes que contém a pesquisa
+* Opção 2:
+    * `python main.py --nome "%Skywalker%"`
+    * Note os caractéres _%_ no nome
+    * Quando esses caractéres estiverem no parâmetro de entrada, a pesquisa deve ser parcial
+    * Caso contrário, a pesquisa é exata
+
+## 7. Se não encontrar pelo termo pesquisado, de sugestões
+
+Quando recebemos entradas no formato `python main.py --nome "Skywalker"`, pode ser que
+ocorra um erro de digitação, por exemplo `python main.py --nome "Skywaler"`.
+Nesse caso, seria interessante mostrar para o usuário uma mensagem do tipo
+_Nenhum personagem "Skywaler" encontrado, mas encontrei: "Luke Skywalker", "Anakin Skywalker"_.
+
+Para resolver esse problema, podemos usar a biblioteca [`fuzzywuzzy`](https://github.com/seatgeek/fuzzywuzzy).
+Basta instalar a biblioteca e comparar as strings com 
+`fuzz.partial_ratio('skywaler', 'Luke Skywalker')`. 
+Essa função retorna um "grau de confiança" entre 0 e 100.
+Portanto, podemos assumir que, se houve comparação perfeita ou parcial (partes 5 e 6), você pode sugerir os nomes que tenham um grau de confiança maior que 75.
+```
+# exemplo
+python main.py --nome "skywaler"
+Nenhum personagem "Skywaler" encontrado, mas encontrei: "Luke Skywalker", "Anakin Skywalker"
+
+# nesse exemplo, não encontrou nenhum personagem com nome "skywaler"
+# mas ao calcular fuzz.partial_ratio('skywaler', 'Luke Skywalker')
+# temos um grau de confiança de 88, logo pode ser que o usuário quis dizer "Luke Skywalker"
+# ao invés de "skywaler"
+# o mesmo acontece com fuzz.partial_ratio('skywaler', 'Anakin Skywalker')
+```
+
+## 8. A imaginação é o limite
+
+Que tal tentar adicionar novos comandos ao `main.py`?
+Pode ser um comando para listar os `n` personagens que mais aparecem em filmes.
+Outro ideia é listar os filmes de forma ordenada pela quantidade de personagems que aparecem no filme.
+Outras ideias? Vá em frente e tente :D
